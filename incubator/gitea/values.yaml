@@ -11,7 +11,7 @@ replicaCount: 1
 
 image:
   repository: gitea/gitea
-  tag: 1.4.2
+  tag: 1.8.3
   pullPolicy: IfNotPresent
 
 service:
@@ -107,7 +107,7 @@ service:
     ##
     cacheHost:
 
-    ## Enable this to use captcha validation for registration.
+    ## Domain name of this Gitea server.
     ##
     serverDomain: gitea.example.com
 
@@ -125,23 +125,23 @@ service:
     ##
     databaseType: postgres
 
-    ## Database host.  Unused unless `postgresql.install` is false.
+    ## Database host.  Used only when `postgresql.install` is true.
     ##
     databaseHost:
 
-    ## Database user.  Unused unless `postgresql.install` is false.
+    ## Database user.  Used only when `postgresql.install` is true.
     ##
     databaseUser:
 
-    ## Database password.  Unused unless `postgresql.install` is false.
+    ## Database password.  Used only when `postgresql.install` is true.
     ##
     databasePassword:
 
-    ## Database password.  Unused unless `postgresql.install` is false.
+    ## Database password.  Used only when `postgresql.install` is true.
     ##
     databaseName:
 
-    ## Database path.  Unused unless `databaseType = sqlite3` is false.
+    ## Database path.  Used only when `databaseType = sqlite3` is true.
     ##
     databasePath: /data/gitea.db
 
